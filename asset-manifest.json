@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/random-name-picker/static/css/main.1c176884.css",
+    "main.js": "/random-name-picker/static/js/main.8cf752e0.js",
+    "static/js/453.c2c92a97.chunk.js": "/random-name-picker/static/js/453.c2c92a97.chunk.js",
+    "static/media/xmas-bg.jpg": "/random-name-picker/static/media/xmas-bg.5c62333ceec37e7afbfb.jpg",
+    "index.html": "/random-name-picker/index.html",
+    "main.1c176884.css.map": "/random-name-picker/static/css/main.1c176884.css.map",
+    "main.8cf752e0.js.map": "/random-name-picker/static/js/main.8cf752e0.js.map",
+    "453.c2c92a97.chunk.js.map": "/random-name-picker/static/js/453.c2c92a97.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c176884.css",
+    "static/js/main.8cf752e0.js"
+  ]
+}
