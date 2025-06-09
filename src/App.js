@@ -1,5 +1,5 @@
 import { RandomNamePicker } from "./component/RandomNamePicker/RandomNamePicker";
-import bg from "./images/xmas-bg.jpg";
+import bg from "./images/liz-day.png";
 
 function App() {
   return (
@@ -11,7 +11,9 @@ function App() {
         backgroundPosition: "center",
       }}
     >
-      <RandomNamePicker />
+      <div className="w-full h-full absolute top-0 left-[-20%]">
+        <RandomNamePicker />
+      </div>
     </div>
   );
 }

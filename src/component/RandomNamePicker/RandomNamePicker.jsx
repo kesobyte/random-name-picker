@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Modal from "react-modal";
 import Confetti from "react-confetti";
+import giftbox from "../../images/gift.png";
 
 Modal.setAppElement("#root");
 
@@ -84,10 +85,14 @@ export const RandomNamePicker = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
-      <p className="text-4xl font-black text-blue-950 mb-3">JUSCALL MANILA</p>
-      <h1 className="text-6xl font-bold  mb-8">
-        <span className="bg-gradient-to-r from-lime-400 to-green-500 bg-clip-text text-transparent">
-          Christmas Party Raffle
+      <p className="text-4xl font-bold text-blue-500 mb-3 font-poppins">
+        {/* Birthday Party Raffle */}
+        생일 파티 추첨
+      </p>
+      <h1 className="text-7xl font-light mb-8 font-oi">
+        <span className="bg-gradient-to-r from-pink-300 to-pink-400 bg-clip-text text-transparent">
+          Happy Liz Day!
+          {/* 리즈의 날 축하드립니다! */}
         </span>
       </h1>
 
@@ -98,34 +103,36 @@ export const RandomNamePicker = () => {
       ) : (
         <button
           onClick={handleRoll}
-          className="p-12 uppercase text-white text-9xl font-semibold rounded-[50%] hover:bg-gray-800 hover:bg-opacity-30"
+          className="p-5 uppercase text-white text-9xl font-semibold rounded-full hover:bg-blue-400 hover:bg-opacity-30 flex items-center justify-center"
         >
-          🎁
+          <img src={giftbox} alt="giftbox" className="h-52" />
         </button>
       )}
 
       <button
         onClick={() => setShowTextarea((prev) => !prev)}
-        className="uppercase mt-6 text-[10px] font-light underline"
+        className="uppercase mt-6 text-[12px] font-light underline font-poppins"
       >
         {showTextarea ? "Hide Names" : "Edit Names"}
       </button>
 
       {showTextarea && (
-        <div className="mt-4 w-full max-w-md bg-white shadow-md rounded-lg p-4">
-          <textarea
-            value={textAreaValue}
-            onChange={handleTextAreaChange}
-            placeholder="Enter names separated by commas or new lines"
-            className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
-            rows="6"
-          />
-          <button
-            onClick={updateNames}
-            className="mt-4 w-full py-2 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600"
-          >
-            Update Names
-          </button>
+        <div className="absolute">
+          <div className="relative bottom-0 mt-4 w-full max-w-md bg-white shadow-md rounded-lg p-4">
+            <textarea
+              value={textAreaValue}
+              onChange={handleTextAreaChange}
+              placeholder="Enter names separated by commas or new lines"
+              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500 resize-none"
+              rows="6"
+            />
+            <button
+              onClick={updateNames}
+              className="mt-4 w-full py-2 bg-green-500 text-white font-bold rounded-lg hover:bg-green-600"
+            >
+              Update Names
+            </button>
+          </div>
         </div>
       )}
 
