@@ -46,8 +46,8 @@ export const RandomNamePicker = () => {
     setIsRolling(true);
 
     const duration = 5000;
-    const initialSpeed = 1; // Initial rolling speed in ms
-    const finalSpeed = 150; // Final rolling speed in ms
+    const initialSpeed = 1; // Initial rolling speed
+    const finalSpeed = 150; // Final rolling speed
 
     let timeElapsed = 0;
     let currentSpeed = initialSpeed;
@@ -60,11 +60,11 @@ export const RandomNamePicker = () => {
         setRollingName(selectedName);
         setNames(names.filter((name) => name !== selectedName));
 
-        //2-second pause before showing the modal para exciting
+        //1-second pause before showing the modal para exciting
         setTimeout(() => {
           setIsRolling(false);
           setIsModalOpen(true);
-        }, 2000);
+        }, 1000);
 
         return;
       }
